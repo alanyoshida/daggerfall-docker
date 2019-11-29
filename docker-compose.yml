@@ -1,11 +1,7 @@
 version: '3'
 services:
   daggerfall:
-    build: 
-      context: .
-      args:
-        uid: $USERID
-        gid: $GROUPID
+    build: .
     user: $USERID:$GROUPID
     tty: true
     volumes:
