@@ -8,7 +8,7 @@ Run daggerfall in docker container using host X server.
 # Instructions
 
 ## Build image Download game
-`$ docker-compose build`
+`$ export USERID=$(id -u) && export GROUPID=$(id -g) && docker-compose build`
 
 ## Install the game
 
