@@ -1,7 +1,13 @@
 version: '3'
 services:
   daggerfall:
-    build: .
+    build: 
+      context: .
+      args:
+        uid: $USERID
+        gid: $GROUPID
+    user: $USERID:$GROUPID
+    tty: true
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix
     environment:
